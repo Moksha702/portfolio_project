@@ -114,7 +114,7 @@ footer{
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 90px 0 70px;
+  padding: 90px 0 100px;
 }
 
 .hero .container {
@@ -148,7 +148,7 @@ footer{
   line-height: 1.05;
 }
 .hero h1 .accent {
-  background: var(--gradient);
+  background: blue;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -171,22 +171,7 @@ footer{
 
 .hero-cta { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
 
-.social-row { display: flex; gap: 12px; margin-top: 40px; }
-.social-icon {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-dim);
-  transition: all 0.2s ease;
-}
-.social-icon:hover {
-  color: #fff;
-  background: var(--gradient);
-  border-color: transparent;
-  transform: translateY(-3px);
-}
-.social-icon svg { width: 17px; height: 17px; }
+
 
 .hero-visual {
   position: relative;
@@ -229,28 +214,4 @@ footer{
   opacity: 0.9;
 }
 
-.scroll-cue {
-  position: absolute;
-  bottom: 26px; left: 50%;
-  transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  color: var(--text-faint);
-  font-size: 12.5px;
-}
-.scroll-cue .mouse {
-  width: 22px; height: 34px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  position: relative;
-}
-.scroll-cue .mouse::after {
-  content: '';
-  position: absolute;
-  top: 6px; left: 50%;
-  width: 3px; height: 7px;
-  background: var(--accent-2);
-  border-radius: 2px;
-  transform: translateX(-50%);
-  animation: scrollDot 1.6s ease-in-out infinite;
-}
-@keyframes scrollDot { 0% { opacity: 1; top: 6px; } 100% { opacity: 0; top: 18px; } }
+
