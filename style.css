@@ -3,9 +3,18 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: #0a0a12;
+    /* background: #0a0a12; */
     box-sizing: border-box;
     color: #f2f2f7;
+    min-height: 100vh;
+  background: radial-gradient(
+    circle at 50% 20%,
+    #21133f 0%,
+    #0c0d16 50%,
+    #05050a 100%
+  );
+  background-attachment: fixed; /* Keeps the gradient pinned smoothly when scrolling */
+  color: #ffffff;
     
   font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
@@ -83,9 +92,16 @@ body{
 .hero{
     padding: 15px;
     border: 1px solid black;
-    background: radial-gradient(circle at 80% 50%, #05050c 0%, #111122 100%);
-    color: #ffffff;
     min-height: 100vh;
+  background: radial-gradient(
+    circle at 50% 20%,
+    #21133f 0%,
+    #0c0d16 50%,
+    #05050a 100%
+  );
+  background-attachment: fixed; /* Keeps the gradient pinned smoothly when scrolling */
+  color: #ffffff;
+  
 
 }
 
@@ -94,6 +110,7 @@ footer{
   text-align: center;
   color: grey;
   font-size: 13.5px;
+  margin-top: 80px;
 }
 
 .hero {
@@ -186,6 +203,55 @@ footer{
   background-size: 14px 14px;
   opacity: 0.9;
 }
+/*============================================================================================================*/
+
+
+.card {
+  --border-radius: 1.25rem;
+  --border-width: 0.5rem;
+
+  position: relative;
+
+  width: 190px;
+  height: 254px;
+  border-radius: var(--border-radius);
+  padding: 20px;
+
+  background: rgb(5, 6, 45);
+  color: white;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+
+  margin: calc(-1 * var(--border-width));
+  border-radius: calc(var(--border-radius) + var(--border-width));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*==============================================================================================================*/
@@ -268,3 +334,31 @@ footer{
 }
 .field textarea { resize: vertical; min-height: 110px; }
 .form-note { font-size: 12.5px; color: #6b6b7c; margin-top: 10px; }
+
+.btnn {
+  --hover-shadows: 16px 16px 33px #121212, -16px -16px 33px #303030;
+  --accent: rgb(157, 0, 255);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 6px;
+  
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  padding: 5px 6px;
+  margin: 5px;
+  transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+    letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+ 
+}
+
+/* .btnn:hover {
+  background-color: var(--accent);
+} */
+
+.btnn:active {
+  box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+  background-color: var(--accent);
+  transform: scale(0.95);
+}
